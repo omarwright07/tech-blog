@@ -1,13 +1,11 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
-
 // get all posts
 router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
-            'post_url',
             'title',
             'content',
             'created_at',
@@ -34,8 +32,6 @@ router.get('/', (req, res) => {
             res.status(500).json(err);
         });
 });
-
-module.exports = router;
 
 // get a single post
 router.get('/:id', (req, res) => {
@@ -71,10 +67,10 @@ router.get('/:id', (req, res) => {
 
 // Post a post
 router.post('/', (req, res) => {
-    // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
+    // expects {title: 'Taskmaster goes public!', content: 'Read all about it!', user_id: 1}
     Post.create({
         title: req.body.title,
-        post_url: req.body.post_url,
+        content: req.body.content,
         user_id: req.body.user_id
     })
         .then(dbPostData => res.json(dbPostData))
@@ -129,3 +125,5 @@ router.delete('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+module.exports = router;
