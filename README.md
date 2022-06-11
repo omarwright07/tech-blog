@@ -43,10 +43,10 @@ Your challenge this week is to build a CMS-style blog site similar to a Wordpres
 * WHEN I am idle on the site for more than a set time
 * THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
-## Mock Up
-![Mock Up screen shot of the Employee Tracker.](./assets/images/12-sql-homework-video-thumbnail.png)
+## Final Screenshot
+<!-- ![Final screen shot of the Tech Blog.](./assets/images/12-sql-homework-video-thumbnail.png) -->
 
 ## GitHub Location
-https://github.com/omarwright07/employee-tracker
+https://github.com/omarwright07/tech-blog
 
-## Recording Location
+## Heroku Location
