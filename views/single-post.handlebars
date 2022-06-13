@@ -2,7 +2,7 @@
     <!-- POST HEADER INFO -->
     <div class="post-header">
         <h2>{{post.title}}</h2>
-        <h4>Posted by {{post.user.username}} on {{post.created_at}}</h4>
+        <h4>Posted by {{post.user.username}} on {{format_date post.created_at}}</h4>
     </div>
     <!-- POST MESSAGE -->
     <div>
@@ -35,7 +35,7 @@
     </div>
     <!-- COMMENT FOOTER INFO -->
     <div class="post-header">
-        <h4>- {{user.username}} on {{created_at}}</h4>
+        <h4>- {{user.username}} on {{format_date created_at}}</h4>
     </div>
 </form>
 {{/each}}
