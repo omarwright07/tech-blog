@@ -135,16 +135,17 @@ button {
 .btn-nav {
     outline: none;
     border: none;
-    margin: 3px;
+    margin: 20px;
     padding: 10px 15px;
     background: var(--primary-color);
     color: var(--quinary-color);
     border-radius: 8px;
+    font-size: var(--font-size-md);
+    text-decoration: none;
 }
 
 .btn-nav:hover {
     background: var(--secondary-color);
-    top: -2px;
 }
 
 .btn-add {

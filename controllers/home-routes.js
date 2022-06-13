@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
             'id',
-            'post_url',
             'title',
             'content',
             'created_at'
@@ -56,6 +55,73 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/addpost', (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('add-post', {
+        dashboard: true,
+        loggedIn: true 
+    });
+});
+
+router.get('/editpost/:id', (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('edit-post', {
+        dashboard: true,
+        loggedIn: true 
+    });
+});
+
+router.get('/dashboard', (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    Post.findAll({
+      where: {
+        user_id: req.session.user_id
+      },
+      attributes: [
+        'id',
+        'title',
+        'content',
+        'created_at',
+      ],
+      include: [
+        {
+          model: Comment,
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['username']
+          }
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
+    })
+      .then(dbPostData => {
+        // serialize data before passing to template
+        const posts = dbPostData.map(post => post.get({ plain: true }));
+        console.log(posts);
+        res.render('dashboard', { 
+            posts, 
+            dashboard: true, 
+            loggedIn: true });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 router.get('/post/:id', (req, res) => {
     Post.findOne({
         where: {
@@ -63,7 +129,6 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
             'title',
             'content',
             'created_at'
