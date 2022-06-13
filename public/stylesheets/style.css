@@ -59,11 +59,27 @@ form {
     max-width: 900px;
 }
 
+a{
+    display: inline-block;
+}
+
 p {
     padding: 10px;
 }
 
-a {
+.post-link {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    color: var(--quinary-color);
+    margin-bottom: 5px;
+}
+
+.post-link:hover {
+    color: var(--quaternary-color);
+}
+
+.login-link {
     color: var(--tertiary-color);
     margin: 10px;
 }
@@ -88,7 +104,7 @@ textarea {
 }
 
 p,
-a,
+.login-link,
 input,
 textarea,
 label {
@@ -135,17 +151,15 @@ button {
 .btn-nav {
     outline: none;
     border: none;
-    margin: 20px;
-    padding: 10px 15px;
-    background: var(--primary-color);
     color: var(--quinary-color);
-    border-radius: 8px;
     font-size: var(--font-size-md);
     text-decoration: none;
+    margin: 10px;
+    background: none;
 }
 
 .btn-nav:hover {
-    background: var(--secondary-color);
+    color: var(--quaternary-color);
 }
 
 .btn-add {
@@ -155,6 +169,9 @@ button {
     padding: 10px 15px;
     background: var(--primary-color);
     color: var(--quinary-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: var(--font-size-md);
     border-radius: 8px;
 }
 
@@ -186,4 +203,13 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    box-sizing: border-box;
 }

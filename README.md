@@ -50,3 +50,4 @@ Your challenge this week is to build a CMS-style blog site similar to a Wordpres
 https://github.com/omarwright07/tech-blog
 
 ## Heroku Location
+https://obscure-hamlet-82871.herokuapp.com/
