@@ -44,7 +44,7 @@ Your challenge this week is to build a CMS-style blog site similar to a Wordpres
 * THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
 ## Final Screenshot
-<!-- ![Final screen shot of the Tech Blog.](./assets/images/12-sql-homework-video-thumbnail.png) -->
+![Final screen shot of the Tech Blog.](./assets/images/tech-blog-screenshot.png)
 
 ## GitHub Location
 https://github.com/omarwright07/tech-blog
