@@ -67,23 +67,6 @@ p {
     padding: 10px;
 }
 
-.post-link {
-    font-weight: bold;
-    text-decoration: none;
-    font-size: var(--font-size-md);
-    color: var(--quinary-color);
-    margin-bottom: 5px;
-}
-
-.post-link:hover {
-    color: var(--quaternary-color);
-}
-
-.login-link {
-    color: var(--tertiary-color);
-    margin: 10px;
-}
-
 textarea {
     min-height: 100px;
 }
@@ -104,7 +87,6 @@ textarea {
 }
 
 p,
-.login-link,
 input,
 textarea,
 label {
@@ -112,7 +94,7 @@ label {
 }
 
 /* =================================== */
-/* Post Styling */
+/* Class Styling */
 
 .post-header {
     padding: 10px;
@@ -122,6 +104,30 @@ label {
 
 .post-content {
     padding: 10px;
+}
+
+.post-link {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: var(--font-size-md);
+    color: var(--quinary-color);
+    margin-bottom: 5px;
+}
+
+.post-link:hover {
+    color: var(--quaternary-color);
+}
+
+.login-link {
+    color: var(--tertiary-color);
+    margin: 10px;
+    font-size: var(--font-size-sm);
+}
+
+.posted-by {
+    margin-top: 5px;
+    color: var(--quaternary-color);
+    font-weight: normal;
 }
 
 /* =================================== */
@@ -183,8 +189,6 @@ button {
     top: -2px;
 }
 
-/* =================================== */
-/* UTILITY */
 .btn-post {
     padding: 20px;
     text-align: left;
@@ -195,23 +199,10 @@ button {
     font-weight: bold;
 }
 
-.posted-by {
-    margin-top: 5px;
-    color: var(--quaternary-color);
-    font-weight: normal;
-}
-
+/* =================================== */
+/* UTILITY */
 .center {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-}
-
-.box {
-    box-sizing: border-box;
 }
