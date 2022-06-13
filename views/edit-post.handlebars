@@ -6,9 +6,9 @@
     <div class="post-content">
         <div>
             <label>Post Title</label>
-            <input type="text" placeholder="..." id="post-title">
+            <textarea class="textarea" placeholder="..." id="post-title">{{post.title}}</textarea>
             <label>Content</label>
-            <textarea class="textarea" placeholder="..." id="post-text"></textarea>
+            <textarea class="textarea" placeholder="..." id="post-text">{{post.content}}</textarea>
         </div>
         <button class="btn-generic" type="submit" id="save">Save</button>
         <button class="btn-generic" type="reset" id="delete">Delete</button>
