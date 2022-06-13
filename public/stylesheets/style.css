@@ -156,6 +156,7 @@ button {
     text-decoration: none;
     margin: 10px;
     background: none;
+    cursor:pointer;
 }
 
 .btn-nav:hover {
@@ -173,6 +174,7 @@ button {
     text-decoration: none;
     font-size: var(--font-size-md);
     border-radius: 8px;
+    cursor:pointer;
 }
 
 .btn-add:hover {
