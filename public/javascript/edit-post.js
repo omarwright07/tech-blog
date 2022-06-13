@@ -1,6 +1,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
     console.log('save');
+    console.log(event);
     const title = document.querySelector('#post-title').value;
     const content = document.querySelector('#post-text').value;
     const post_id = window.location.toString().split('/')[
@@ -28,6 +29,7 @@ async function newFormHandler(event) {
 async function deleteFormHandler(event) {
     event.preventDefault();
     console.log('delete');
+    console.log(event);
     const post_id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
     ];
@@ -49,5 +51,5 @@ async function deleteFormHandler(event) {
     }
 }
 
-document.querySelector('#save').addEventListener('submit', newFormHandler);
-document.querySelector('#delete').addEventListener('submit', deleteFormHandler);
+document.querySelector('#edit-post-form').addEventListener('submit', newFormHandler);
+document.querySelector('#edit-post-form').addEventListener('reset', deleteFormHandler);
